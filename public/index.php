@@ -25,9 +25,30 @@ $dependencies($app);
 $middleware = require __DIR__ . '/../src/middleware.php';
 $middleware($app);
 
-// Register routes
-$routes = require __DIR__ . '/../src/routes.php';
+// index route
+$routes = require __DIR__ . '/../src/routes/indexRoute.php';
 $routes($app);
+
+// cadastro route
+
+$routes = require __DIR__ . '/../src/routes/cadastroRoute.php';
+$routes($app);
+
+// Mostra a tabela com os regsitros
+
+$routes = require __DIR__ . '/../src/routes/consultarRoute.php';
+$routes($app);
+
+// edita os regsitros
+
+$routes = require __DIR__ . '/../src/routes/editarRoute.php';
+$routes($app);
+
+
+
+
+
+
 
 // Run app
 $app->run();

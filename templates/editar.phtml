@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <title>editar</title>
+</head>
+<body>
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Home</a>
+        </nav>
+    </header>
+    <div class="container mt-5">
+
+        <div class="input-group mb-3 p-0 justify-content-center">
+            <h1 class="text-center"> Editar Veículo</h1>
+            <div class="col-12">
+
+                <form method="get" action="/editar-veiculo/">
+
+                    <label>ID do veículo</label>
+                    <input name="id" type="number" class="form-control">
+                    <button type="submit">Selecionar</button>
+
+                </form>
+            </div>
+            <form method="post" action="/editar-veiculo/" class="col-10">
+
+                <!-- envia o id pro front -->            
+                <input name="veiculo" type="hidden" value="<?php echo $id_veiculo; ?>">
+
+                                  </select>
+                </div>
+
+                
+                <!-- Input marca  -->
+                <div class="input-group mb-3 mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Marca Veículo</span>
+                    </div>
+                    <input type="text" name="marca" value="<?php echo $marca ?>" class="form-control" placeholder="Fiat" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <!-- input modelo  -->
+                <div class="input-group mb-3 mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Modelo Veículo</span>
+                    </div>
+                    <input type="text" name="modelo" value="<?php echo $modelo?>" class="form-control" placeholder="Mobi " aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <!-- ano do veículo  -->
+                <div class="input-group mb-3 mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">ano do Veículo</span>
+                    </div>
+                    
+                </div>
+                
+                <button type="submit">Editar</button>
+                
+                
+        </div>
+    </div>
+</body>
+</html>

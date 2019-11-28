@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Slim 3</title>
-        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                margin: 50px 0 0 0;
-                padding: 0;
-                width: 100%;
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                text-align: center;
-                color: #aaa;
-                font-size: 18px;
-            }
 
-            h1 {
-                color: #719e40;
-                letter-spacing: -3px;
-                font-family: 'Lato', sans-serif;
-                font-size: 100px;
-                font-weight: 200;
-                margin-bottom: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Slim</h1>
-        <div>a microframework for PHP</div>
+<head>
+    <meta charset="utf-8" />
+    <title>Slim 3</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
 
-        <?php if (isset($name)) : ?>
-            <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
-        <?php else: ?>
-            <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>
-        <?php endif; ?>
-    </body>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Home</a>
+        </nav>
+    </header>
+        <div class="container mt-5">
+
+            <section class="text-center">
+                <div class="col-12">
+                    <h1>Carros </h1>
+                </div>
+
+                <div class="mt-5 col-12 d-flex justify-content-around"> 
+                    <a class="btn btn-secondary btn-lg" href="/cadastro-carro/">Cadastrar carro</a>
+                    <a class="btn btn-primary btn-lg" href="/consultar/">Ver tabela de carros</a>
+                    <a class="btn btn-secondary btn-lg" href="/editar/">Editar carros</a>
+
+                </div>
+
+
+            </section>
+        </div>
+
+
+
+
+</body>
+
 </html>
